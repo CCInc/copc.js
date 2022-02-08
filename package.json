@@ -4,11 +4,10 @@
   "version": "0.0.2",
   "main": "lib/index.js",
   "scripts": {
-    "build": "ttsc --project tsconfig.production.json",
+    "build": "ttsc --project tsconfig.production.json && npm run web-build",
     "prepare": "yarn build",
     "test": "jest",
-    "web-build": "rm -rf ./web && esbuild src/index.ts --define:global=window --bundle --minify --outfile=web/copc.js --format=iife --global-name=COPC --target=es2020 && cp -R ./src/laz-perf ./web/laz-perf",
-    "web-build-debug": "esbuild src/index.ts --define:global=window --bundle --sourcemap --outfile=web/copc.js --format=iife --global-name=COPC --target=es2020"
+    "web-build": "esbuild src/index.ts --define:global=window --bundle --minify --sourcemap --outfile=web/copc.js --format=iife --global-name=COPC --target=es2020 && cp -R ./src/laz-perf ./web/laz-perf"
   },
   "dependencies": {
     "yarn": "^1.22.17"
