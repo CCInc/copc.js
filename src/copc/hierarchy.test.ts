@@ -1,5 +1,5 @@
-import { Getter } from 'utils'
-import { ellipsoidFilename } from 'test'
+import { Getter } from '../utils'
+import { ellipsoidFilename } from '../test'
 
 import { Copc } from './copc'
 import { Hierarchy } from './hierarchy'

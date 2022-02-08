@@ -1,9 +1,8 @@
 {
-  "include": ["src"],
+  "include": ["./src"],
   "compilerOptions": {
-    "baseUrl": "src",
-    "rootDir": "src",
-    "outDir": "lib",
+    "rootDir": "./src",
+    "outDir": "./lib",
 
     "target": "es2017",
     "module": "commonjs",

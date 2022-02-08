@@ -1,6 +1,6 @@
-import { ellipsoidFilename } from 'test'
+import { ellipsoidFilename } from '../test'
 
-import { Dimension } from 'utils'
+import { Dimension } from '../utils'
 import { Copc } from '.'
 
 const filename = ellipsoidFilename

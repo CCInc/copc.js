@@ -1,6 +1,6 @@
 import { Forager } from 'forager'
 
-import { ellipsoidFilename } from 'test'
+import { ellipsoidFilename } from '../test'
 
 import { Header } from '.'
 

@@ -1,7 +1,7 @@
 import { Forager } from 'forager'
 
-import { Header, Vlr } from 'las'
-import { ellipsoidFilename } from 'test'
+import { Header, Vlr } from '../las'
+import { ellipsoidFilename } from '../test'
 
 import { Offsets } from './offsets'
 
