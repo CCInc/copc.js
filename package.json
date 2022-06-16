@@ -7,17 +7,19 @@
     "build": "ttsc --project tsconfig.production.json && npm run web-build",
     "prepare": "yarn build",
     "test": "jest",
-    "web-build": "esbuild src/index.ts --define:global=window --bundle --minify --sourcemap --outfile=web/copc.js --format=iife --global-name=COPC --target=es2020 && cp -R ./src/laz-perf ./web/laz-perf"
+    "web-build": "esbuild src/index.ts --define:global=window --bundle --minify --sourcemap --outfile=web/copc.js --format=iife --global-name=COPC --target=es2020 && ncp ./src/laz-perf ./web/laz-perf"
   },
   "dependencies": {
     "yarn": "^1.22.17"
   },
   "devDependencies": {
+    "ncp": "^2.0.0",
     "@types/emscripten": "^1.39.5",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.6.1",
     "@types/node-fetch": "^2.5.12",
     "@zerollup/ts-transform-paths": "^1.7.18",
+    "esbuild": "^0.13.8",
     "forager": "^0.0.8",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
@@ -28,8 +30,7 @@
     "ts-loader": "^9.2.5",
     "ts-node": "^10.2.0",
     "ttypescript": "^1.5.12",
-    "typescript": "^4.3.5",
-    "esbuild": "^0.13.8"
+    "typescript": "^4.3.5"
   },
   "husky": {
     "hooks": {
